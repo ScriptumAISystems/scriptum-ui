@@ -1,0 +1,22 @@
+name: Generate Frontend
+on:
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Create Vite React App
+        run: |
+          pnpm create vite@latest frontend -- --template react-ts
+      - name: Commit generated frontend
+        run: |
+          git config user.name "scriptum-bot"
+          git config user.email "bot@scriptum.local"
+          git add frontend
+          git commit -m "auto: generate frontend skeleton"
+          git push
