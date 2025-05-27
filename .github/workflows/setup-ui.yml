@@ -18,7 +18,7 @@ jobs:
         run: |
           cd frontend
           pnpm install -D tailwindcss postcss autoprefixer @shadcn/ui
-        pnpm exec tailwindcss init -p
+         exec tailwindcss init -p
           printf "@tailwind base;\n@tailwind components;\n@tailwind utilities;\n" > src/index.css
       - name: Commit UI setup
         run: |
