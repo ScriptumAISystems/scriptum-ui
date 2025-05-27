@@ -1,0 +1,28 @@
+name: Setup UI Skeleton
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  setup-ui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - name: Install Tailwind & shadcn/ui
+        run: |
+          cd frontend
+          pnpm install -D tailwindcss postcss autoprefixer @shadcn/ui
+          npx tailwindcss init -p
+          printf "@tailwind base;\n@tailwind components;\n@tailwind utilities;\n" > src/index.css
+      - name: Commit UI setup
+        run: |
+          git config user.name "scriptum-bot"
+          git config user.email "bot@scriptum.local"
+          git add frontend
+          git commit -m "auto: setup UI skeleton with Tailwind and shadcn/ui"
+          git push
