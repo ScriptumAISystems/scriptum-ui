@@ -1,0 +1,28 @@
+# Scriptum-UI Backlog
+# This file is automatically synchronized on each commit.
+
+backlog:
+  - id: P1-001
+    title: "Git- & Build-Gerüst"
+    risk: Medium
+    effort: 3
+    eta_slot: "KW1"
+    done_criteria: "pnpm install & docker compose up laufen fehlerfrei"
+  - id: P1-002
+    title: "UI Skeleton & Design"
+    risk: Low
+    effort: 5
+    eta_slot: "KW2"
+    done_criteria: "Responsive Mock im Browser, Dark-Mode"
+  - id: P1-003
+    title: "Chat- & Agenten-Module"
+    risk: Medium
+    effort: 8
+    eta_slot: "KW3"
+    done_criteria: "Gruppen-Chat mit Dummy-Antworten über WebSocket"
+  - id: P1-004
+    title: "Backend-Stubs & Security"
+    risk: High
+    effort: 8
+    eta_slot: "KW4"
+    done_criteria: "STT/TTS-Endpoints, Pentest-Placeholder, Pre-Spark-Release v0.1"
