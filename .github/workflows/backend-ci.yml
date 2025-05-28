@@ -44,7 +44,7 @@ jobs:
           ruff backend
       - name: Run tests
           env:
-             PYTHONPATH: ${{ github.workspace }}
+                        PYTHONPATH: ${{ github.workspace }}
         run: |
           pip install pytest httpx pytest-asyncio
           pytest backend/app/tests
