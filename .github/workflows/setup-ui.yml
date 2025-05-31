@@ -10,9 +10,9 @@ jobs:
   setup-ui:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
+      -   uses: actions/checkout@v3
+      -   uses: pnpm/action-setup@v2
+          with:
           version: '8'
       - name: Install Tailwind & shadcn/ui
         run: |
