@@ -29,7 +29,11 @@ class ActionPayload(BaseModel):
 
 class ActionResponse(BaseModel):
     status: str
-    message: str
+   
+    
+class MoodPayload(BaseModel):
+    mood: str
+    messae: str
 
 @app.get("/mood", response_model=Mood)
 async def get_mood(Authorization: str = Header(...)):
@@ -57,6 +61,12 @@ async def get_agents(Authorization: str = Header(...)):
             },
         ]
     }
+
+@app.post("/mood", response_model=Mood)
+async def set_mood(payload: MoodPayload, Authorization: str = Header(...)):
+    verify_token(Authorization)
+    # TODO: Persist mood if needed
+    return payload
 
 @app.post("/action", response_model=ActionResponse)
 async def post_action(payload: ActionPayload, Authorization: str = Header(...)):
