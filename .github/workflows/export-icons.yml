@@ -1,0 +1,28 @@
+name: Export Icons
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'icon-master.svg'
+      - 'scripts/export-icons.sh'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Run export script
+        run: bash scripts/export-icons.sh icon-master.svg
+      - name: Commit generated icons
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/assets
+          git commit -m "feat(assets): export icon set for PWA & browser" || echo "No changes to commit"
+          git push origin HEAD:feat/assets-icon-setup
