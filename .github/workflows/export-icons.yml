@@ -17,7 +17,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Run export script
+         - name: Install dependencies
+      run: sudo apt-get update && sudo apt-get install -y librsvg2-bin pngquant
+
+      ame: Run export script
         run: bash scripts/export-icons.sh icon-master.svg
       - name: Commit generated icons
         run: |
