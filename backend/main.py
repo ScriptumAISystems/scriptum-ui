@@ -1,9 +1,10 @@
 from fastapi import FastAPI, Header, HTTPException
 from pydantic import BaseModel
-from typing import List
 
+from app.routers.auth import router as auth_router
 app = FastAPI(title="LUX Backend")
 
+app.include_router(auth_router)
 DUMMY_TOKEN = "secret-token"
 
 def verify_token(token: str):
