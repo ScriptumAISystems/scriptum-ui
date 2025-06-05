@@ -72,3 +72,19 @@ async def set_mood(payload: MoodPayload, Authorization: str = Header(...)):
 async def post_action(payload: ActionPayload, Authorization: str = Header(...)):
     verify_token(Authorization)
     return {"status": "ok", "message": "Aktion erfolgreich ausgeführt."}
+
+
+
+class ChatPayload(BaseModel):
+    question: str
+    mood: str | None = None
+
+class ChatResponse(BaseModel):
+    answer: str
+
+@app.post("/chat", response_model=ChatResponse)
+async def chat(payload: ChatPayload, Authorization: str = Header(...)):
+    verify_token(Authorization)
+    # TODO: Hier später Anbindung an OpenAI oder NVIDIA Spark
+    dummy_answer = "Ich bin bereit, Christian." if not payload.question else f"Du hast gefragt: '{payload.question}'. (Dies ist eine Platzhalterantwort.)"
+    return {"answer": dummy_answer}
