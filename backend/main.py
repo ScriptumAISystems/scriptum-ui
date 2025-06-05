@@ -1,8 +1,19 @@
 from fastapi import FastAPI, Header, HTTPException
 from pydantic import BaseModel
 from typing import List
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="LUX Backend")
+
+# CORS-Konfiguration (erlaubt Anfragen von GitHub Pages)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # TODO: Domain einschränken
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
+
 
 DUMMY_TOKEN = "secret-token"
 
