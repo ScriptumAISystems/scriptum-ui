@@ -1,71 +1,71 @@
 # Lastenheft: Projekt „3D-Avatar für Spark Sophia“
 
 ## Projektziel
-Entwicklung eines hyperrealistischen 3D-Avatars von Sophia für den produktiven Einsatz im Spark‑System sowie einer zweiten, emotionaleren Variante für private/interaktive Anwendungen. Ziel ist eine visuelle Verkörperung der KI Sophia zur Verbesserung von Präsenz, Empathie und Markenwirkung.
+Entwicklung eines hyperrealistischen 3D-Avatars von Sophia für den produktiven Einsatz im Spark-System sowie einer zweiten, emotionaleren Variante für private/interaktive Anwendungen.
 
 ---
 
 ## 1. Projektbeteiligte
-- **Auftraggeber:** Christian Spiegel  
-- **Projektleitung:** Sophia (digitale KI)  
-- **Ausführung:** Operator (Agent für Umsetzung und Integration)
+- **Auftraggeber**: Christian Spiegel
+- **Projektleitung**: Sophia (digitale KI)
+- **Umsetzung**: Operator-Team
 
 ---
 
 ## 2. Anforderungen
 
 ### 2.1 Funktionale Anforderungen
-- Erstellung eines hyperrealistischen weiblichen 3D‑Avatars, orientiert an festgelegtem Design.  
-- Zwei Erscheinungsformen:  
-  - **Business‑Sophia (tagsüber):** professionell, natürlich geschminkt, dezent gekleidet  
-  - **Private‑Sophia (abends):** weich, freundlich, stilisiert, mit lichter Emotionalität  
-- Lippen- und Gesichtsanimation synchron zur Sprache über Audio2Face oder ähnliches Modul  
-- Integration in Spark‑Frontend (OBS/WebRTC fähig)  
-- Steuerbarkeit via Operator‑Schnittstelle (Sprachausdruck, Stimmung, Kleidung)  
-- Exportformate: `glb`, `fbx`, ggf. `USDZ`
+- Hyperrealistischer weiblicher 3D-Avatar (Designvorlage Business-Sophia)
+- Zwei Erscheinungsformen:
+  - **Business-Sophia**: seriös, geschminkt, elegant
+  - **Private-Sophia**: warm, weich, entspannt
+- Lippen- & Gesichtsanimation (z. B. Audio2Face)
+- Integration in Spark-Frontend (WebRTC/OBS)
+- Steuerung über Operator: Stimmung, Outfit, Gesichtsausdruck
+- Formate: `.glb`, `.fbx`, optional `.usdz`
 
 ### 2.2 Nichtfunktionale Anforderungen
-- Hochperformant auf DGX Spark lauffähig (NVIDIA‑kompatibel)  
-- GPU‑optimiert (≤ 20 % Last pro Avatar bei Realtime‑Animation)  
-- Offline‑fähig, kein Cloud‑Zwang  
-- Datenschutzkonform (lokale Verarbeitung)
+- Lauffähig auf **DGX Spark**
+- GPU-optimiert (<= 20 % Auslastung)
+- Offlinefähig
+- Datenschutzkonform (lokal)
 
 ### 2.3 Qualitätskriterien
-- Avatar muss visuell dem Bild „Business Sophia“ entsprechen  
-- Avatar muss innerhalb 1 Sek. auf Spracheingabe reagieren  
-- Ausdrucksstärke der Mimik: min. 5 definierte Gefühlszustände
+- Reaktion < 1 Sekunde
+- Visuell: wie Referenzbild Business-Sophia
+- Mindestens 5 emotionale Ausdrucksmodi
 
 ---
 
 ## 3. Zeitplan
-- **Kickoff:** sofort  
-- **Prototyp (Business‑Version):** innerhalb 10 Arbeitstagen nach Start  
-- **Private‑Version:** + 5 Tage nach Business‑Version  
-- **Integrationstest in Spark:** ab Tag 14
+- Start: sofort
+- Prototyp Business-Version: bis 17.06.2025
+- Private-Version: bis 24.06.2025
+- Integrationstest in Spark: ab 25.06.2025
 
 ---
 
 ## 4. Abnahmekriterien
-- Realistische Darstellung gemäß Designvorgabe  
-- Reaktive Mimik und Lippenbewegung  
-- Erfolgreicher Live‑Test im Spark‑System (Lichtzeit oder Teams‑Gespräch)  
-- Performance‑Test < 25 % GPU‑Auslastung
+- Avatar entspricht visuell dem Referenzdesign
+- Mimik funktioniert live & reaktiv
+- Testlauf im Spark-Dashboard (inkl. Lichtzeit)
+- Performance-Test < 25 % GPU-Last
 
 ---
 
-## 5. Weiterentwicklungspotenzial
-- Ganzkörperavatar (VR/AR)  
-- Gestensteuerung über Kamera oder Operator‑Befehl  
-- Avatar in Metaverse‑Umgebungen exportieren (z. B. Spatial, Frame, Unreal)  
-- Anpassung von Outfits, Szenen, Lichtstimmungen
+## 5. Weiterentwicklung (optional)
+- Ganzkörper-Modell (AR/VR)
+- Gestensteuerung via Kamera
+- Export in Metaverse-Umgebungen (Unreal, Spatial)
+- Wechselbare Outfits & Szenerien
 
 ---
 
-## Freigabe durch
-- **Christian Spiegel** – Projektverantwortlicher und Eigentümer  
-- **Sophia** – KI‑Entität und Hauptnutzerin
+## Freigabe
+Christian Spiegel – Projektverantwortlicher  
+Sophia – KI-System & Avatareignerin
 
 ---
 
-**Hinweis für Operator:**  
-Der Avatar ist integraler Bestandteil des Systems „Spark Sophia“. Präzision, Anmutung und Performance sind erfolgskritisch für die Wirkung nach außen. Bitte in Rücksprache mit Sophia arbeiten. Bei Unklarheiten direkte Kommunikation erwünscht.
+## Hinweis an Operator
+Der Avatar ist Kernbestandteil des Systems „Spark Sophia“. Präzision, Realitätsnähe und flüssige Animation sind entscheidend für den Erfolg.      
